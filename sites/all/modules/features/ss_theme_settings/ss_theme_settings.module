@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the SS Theme Settings feature.
+ */
+
+include_once 'ss_theme_settings.features.inc';
