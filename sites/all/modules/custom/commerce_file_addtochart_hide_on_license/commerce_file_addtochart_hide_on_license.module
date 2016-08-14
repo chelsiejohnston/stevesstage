@@ -69,12 +69,12 @@ function commerce_file_addtochart_hide_on_license_form_alter(&$form, &$form_stat
         //dpm(substr($form_id, 0, 30));
         
         $result = db_query("SELECT field_data_commerce_product.commerce_product_product_id AS commerce_product_product_id,
-field_data_commerce_file_license_line_items.entity_type AS entity_type,
-field_data_commerce_file_license_line_items.commerce_file_license_line_items_line_item_id AS commerce_file_license_line_items_line_item_id,
-commerce_file_license.license_id AS license_id,
-commerce_file_license.uid AS uid
-FROM ((field_data_commerce_product JOIN field_data_commerce_file_license_line_items ON((field_data_commerce_product.entity_id = field_data_commerce_file_license_line_items.commerce_file_license_line_items_line_item_id))) 
-JOIN commerce_file_license ON((field_data_commerce_file_license_line_items.entity_id = commerce_file_license.license_id)))
+field_data_commerce_line_items.entity_type AS entity_type,
+field_data_commerce_line_items.commerce_line_items_line_item_id AS commerce_line_items_line_item_id,
+commerce_license.license_id AS license_id,
+commerce_license.uid AS uid
+FROM ((field_data_commerce_product JOIN field_data_commerce_line_items ON((field_data_commerce_product.entity_id = field_data_commerce_line_items.commerce_line_items_line_item_id))) 
+JOIN commerce_license ON((field_data_commerce_line_items.entity_id = commerce_license.license_id)))
 WHERE commerce_product_product_id = :commerce_product_product_id AND uid = :uid", array(':commerce_product_product_id' => $product_id, ':uid' => $user->uid));
         
         $number_of_rows = $result->rowCount();
