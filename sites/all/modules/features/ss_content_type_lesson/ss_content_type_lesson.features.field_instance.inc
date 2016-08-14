@@ -545,7 +545,7 @@ function ss_content_type_lesson_field_default_field_instances() {
     'entity_type' => 'node',
     'fences_wrapper' => '',
     'field_name' => 'field_lesson_category',
-    'label' => 'Category',
+    'label' => 'Categories',
     'product_catalog' => 1,
     'required' => 0,
     'settings' => array(
@@ -822,7 +822,7 @@ function ss_content_type_lesson_field_default_field_instances() {
 
   // Translatables
   // Included for use with string extractors like potx.
-  t('Category');
+  t('Categories');
   t('Comment');
   t('Files');
   t('Introduction');
