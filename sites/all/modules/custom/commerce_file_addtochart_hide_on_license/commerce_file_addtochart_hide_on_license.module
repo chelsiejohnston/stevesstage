@@ -83,7 +83,7 @@ WHERE commerce_product_product_id = :commerce_product_product_id AND uid = :uid"
         //$form['submit'] = array('#access' => FALSE);
         if($number_of_rows > 0) {
             $form['submit']['#disabled'] = TRUE;
-            $form['submit']['#suffix'] = t('(you already bought this product)');
+            $form['submit']['#suffix'] = t('You have already purchased this lesson');
         }
         
         //dpm($form);
