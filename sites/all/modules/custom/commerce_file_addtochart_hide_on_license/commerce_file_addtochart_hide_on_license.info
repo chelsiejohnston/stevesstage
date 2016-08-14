@@ -1,0 +1,11 @@
+name = commerce_file_addtochart_hide_on_license (by itamair)
+description = Hide the Add to chart Button and shows the licensed files for download 
+package = Commerce (contrib)
+core = 7.x
+dependencies[] = views
+dependencies[] = eva
+dependencies[] = commerce
+dependencies[] = commerce_file
+
+files[] = commerce_file_addtochart_hide_on_license.module
+

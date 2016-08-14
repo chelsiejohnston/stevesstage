@@ -1,0 +1,94 @@
+<?php
+
+//This tried but didn't work ...
+///**
+// * Implements hook_field_access().
+// */
+//function commerce_file_addtochart_hide_on_license_field_access($op, $field, $entity_type, $entity = NULL, $account = NULL) {
+//  global $user;
+//
+//  // pass if not a commerce file field
+//  if (!isset($field['type']) || $field['type'] != COMMERCE_FILE_FIELD_TYPE) {
+//    return;
+//  }
+//
+//  return TRUE;
+//}
+//
+//
+
+//This tried but didn't work ...
+///** * Implements hook_preprocess_field(). */
+//function commerce_file_addtochart_hide_on_license_preprocess_field(&$vars) {
+//    
+//    $element = $vars['element'];
+//    //dpm($vars);
+//    
+//    if ( isset($element['#field_type']) && $element['#field_type'] == 'commerce_file') {
+//        
+//        dpm('$element $vars');
+//        dpm($element);
+//        $element['#field_type'] = TRUE;    
+//        $vars['label'] = 'Un mio label personalizzato';
+//    }
+//
+//}
+
+/**
+ * Implements hook_views_api().
+ */
+function commerce_file_addtochart_hide_on_license_views_api() {
+    return array(
+        'api' => '3.0',
+    );
+}
+
+/**
+ * Implements hook_views_default_views().
+ */
+function commerce_file_addtochart_hide_on_license_views_default_views() {
+    $path = './' . drupal_get_path('module', 'commerce_file_addtochart_hide_on_license') . '/views/*.inc';
+    $views = array();
+    foreach (glob($path) as $views_filename) {
+        require_once($views_filename);
+    }
+    return $views;
+}
+
+/** * Implements hook_form_alter(). */
+function commerce_file_addtochart_hide_on_license_form_alter(&$form, &$form_state, $form_id) {
+    
+    if ( substr($form_id, 0, 30) == 'commerce_cart_add_to_cart_form') {
+        
+        global $user;
+        //dpm($user->uid);
+        
+        $product_id = $form['product_id']['#value'];
+        //dpm($product_id);
+        
+        //dpm(substr($form_id, 0, 30));
+        
+        $result = db_query("SELECT field_data_commerce_product.commerce_product_product_id AS commerce_product_product_id,
+field_data_commerce_line_items.entity_type AS entity_type,
+field_data_commerce_line_items.commerce_line_items_line_item_id AS commerce_line_items_line_item_id,
+commerce_license.license_id AS license_id,
+commerce_license.uid AS uid
+FROM ((field_data_commerce_product JOIN field_data_commerce_line_items ON((field_data_commerce_product.entity_id = field_data_commerce_line_items.commerce_line_items_line_item_id))) 
+JOIN commerce_license ON((field_data_commerce_line_items.entity_id = commerce_license.license_id)))
+WHERE commerce_product_product_id = :commerce_product_product_id AND uid = :uid", array(':commerce_product_product_id' => $product_id, ':uid' => $user->uid));
+        
+        $number_of_rows = $result->rowCount();
+        //dpm($number_of_rows);
+        //$form['product_id']['#type'] = 'textfield';
+        //$form['submit'] = array('#access' => FALSE);
+        if($number_of_rows > 0) {
+            $form['submit']['#disabled'] = TRUE;
+            $form['submit']['#suffix'] = t('(you already bought this product)');
+        }
+        
+        //dpm($form);
+        //dpm($form_state);
+        //dpm($form_state['line_item']);
+        
+    }
+}
