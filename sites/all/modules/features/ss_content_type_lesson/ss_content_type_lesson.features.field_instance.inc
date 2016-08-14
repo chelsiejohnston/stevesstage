@@ -439,6 +439,216 @@ function ss_content_type_lesson_field_default_field_instances() {
     ),
   );
 
+  // Exported field_instance: 'node-lesson-field_introduction'.
+  $field_instances['node-lesson-field_introduction'] = array(
+    'bundle' => 'lesson',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'hidden',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 3,
+      ),
+      'featured' => array(
+        'label' => 'hidden',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 2,
+      ),
+      'product_list' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'purchased' => array(
+        'label' => 'hidden',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 3,
+      ),
+      'teaser' => array(
+        'label' => 'hidden',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 2,
+      ),
+    ),
+    'entity_type' => 'node',
+    'fences_wrapper' => '',
+    'field_name' => 'field_introduction',
+    'label' => 'Introduction',
+    'required' => 0,
+    'settings' => array(
+      'display_summary' => 0,
+      'text_processing' => 1,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'text',
+      'settings' => array(
+        'rows' => 20,
+        'summary_rows' => 5,
+      ),
+      'type' => 'text_textarea_with_summary',
+      'weight' => 33,
+    ),
+  );
+
+  // Exported field_instance: 'node-lesson-field_lesson_category'.
+  $field_instances['node-lesson-field_lesson_category'] = array(
+    'bundle' => 'lesson',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'inline',
+        'module' => 'taxonomy',
+        'settings' => array(),
+        'type' => 'taxonomy_term_reference_link',
+        'weight' => 2,
+      ),
+      'featured' => array(
+        'label' => 'inline',
+        'module' => 'taxonomy',
+        'settings' => array(),
+        'type' => 'taxonomy_term_reference_link',
+        'weight' => 3,
+      ),
+      'product_list' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'purchased' => array(
+        'label' => 'hidden',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 2,
+      ),
+      'teaser' => array(
+        'label' => 'hidden',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 17,
+      ),
+    ),
+    'entity_type' => 'node',
+    'fences_wrapper' => '',
+    'field_name' => 'field_lesson_category',
+    'label' => 'Category',
+    'product_catalog' => 1,
+    'required' => 0,
+    'settings' => array(
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 0,
+      'module' => 'taxonomy',
+      'settings' => array(
+        'autocomplete_path' => 'taxonomy/autocomplete',
+        'size' => 60,
+      ),
+      'type' => 'taxonomy_autocomplete',
+      'weight' => 32,
+    ),
+  );
+
+  // Exported field_instance: 'node-lesson-field_lesson_preview'.
+  $field_instances['node-lesson-field_lesson_preview'] = array(
+    'bundle' => 'lesson',
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'file_entity',
+        'settings' => array(
+          'file_view_mode' => 'default',
+        ),
+        'type' => 'file_rendered',
+        'weight' => 4,
+      ),
+      'featured' => array(
+        'label' => 'above',
+        'module' => 'file_entity',
+        'settings' => array(
+          'file_view_mode' => 'default',
+        ),
+        'type' => 'file_rendered',
+        'weight' => 1,
+      ),
+      'product_list' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'purchased' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 4,
+      ),
+      'teaser' => array(
+        'label' => 'hidden',
+        'module' => 'file_entity',
+        'settings' => array(
+          'file_view_mode' => 'default',
+        ),
+        'type' => 'file_rendered',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'fences_wrapper' => '',
+    'field_name' => 'field_lesson_preview',
+    'label' => 'Lesson Preview',
+    'required' => 0,
+    'settings' => array(
+      'description_field' => 0,
+      'file_directory' => 'sites/default/private',
+      'file_extensions' => 'txt',
+      'max_filesize' => '',
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'media',
+      'settings' => array(
+        'allowed_schemes' => array(
+          'oembed' => 0,
+          'private' => 0,
+          'public' => 'public',
+          'youtube' => 'youtube',
+        ),
+        'allowed_types' => array(
+          'audio' => 0,
+          'document' => 0,
+          'image' => 0,
+          'video' => 'video',
+        ),
+        'browser_plugins' => array(
+          'media_default--media_browser_1' => 0,
+          'media_default--media_browser_my_files' => 0,
+          'media_internet' => 'media_internet',
+          'upload' => 0,
+        ),
+      ),
+      'type' => 'media_generic',
+      'weight' => 34,
+    ),
+  );
+
   // Exported field_instance: 'node-lesson-field_product'.
   $field_instances['node-lesson-field_product'] = array(
     'bundle' => 'lesson',
@@ -446,10 +656,9 @@ function ss_content_type_lesson_field_default_field_instances() {
     'description' => '',
     'display' => array(
       'default' => array(
-        'label' => 'above',
+        'label' => 'hidden',
         'module' => 'commerce_cart',
         'settings' => array(
-          'attributes_single' => 1,
           'combine' => 1,
           'default_quantity' => 1,
           'line_item_type' => 'product',
@@ -457,7 +666,13 @@ function ss_content_type_lesson_field_default_field_instances() {
           'show_single_product_attributes' => FALSE,
         ),
         'type' => 'commerce_cart_add_to_cart_form',
-        'weight' => 3,
+        'weight' => 5,
+      ),
+      'featured' => array(
+        'label' => 'hidden',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 4,
       ),
       'full' => array(
         'label' => 'hidden',
@@ -478,11 +693,17 @@ function ss_content_type_lesson_field_default_field_instances() {
         'type' => 'hidden',
         'weight' => 0,
       ),
+      'purchased' => array(
+        'label' => 'hidden',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 5,
+      ),
       'teaser' => array(
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 0,
+        'weight' => 18,
       ),
     ),
     'entity_type' => 'node',
@@ -530,7 +751,18 @@ function ss_content_type_lesson_field_default_field_instances() {
           'title_style' => '',
         ),
         'type' => 'title_linked',
-        'weight' => -20,
+        'weight' => 0,
+      ),
+      'featured' => array(
+        'label' => 'hidden',
+        'module' => 'title',
+        'settings' => array(
+          'title_class' => '',
+          'title_link' => 'content',
+          'title_style' => '',
+        ),
+        'type' => 'title_linked',
+        'weight' => 0,
       ),
       'product_list' => array(
         'label' => 'hidden',
@@ -543,6 +775,17 @@ function ss_content_type_lesson_field_default_field_instances() {
         'type' => 'title_linked',
         'weight' => -20,
       ),
+      'purchased' => array(
+        'label' => 'hidden',
+        'module' => 'title',
+        'settings' => array(
+          'title_class' => '',
+          'title_link' => 'content',
+          'title_style' => '',
+        ),
+        'type' => 'title_linked',
+        'weight' => 0,
+      ),
       'teaser' => array(
         'label' => 'hidden',
         'module' => 'title',
@@ -552,7 +795,7 @@ function ss_content_type_lesson_field_default_field_instances() {
           'title_style' => '',
         ),
         'type' => 'title_linked',
-        'weight' => -20,
+        'weight' => 1,
       ),
     ),
     'entity_type' => 'node',
@@ -579,8 +822,11 @@ function ss_content_type_lesson_field_default_field_instances() {
 
   // Translatables
   // Included for use with string extractors like potx.
+  t('Category');
   t('Comment');
   t('Files');
+  t('Introduction');
+  t('Lesson Preview');
   t('License duration');
   t('License type');
   t('Price');

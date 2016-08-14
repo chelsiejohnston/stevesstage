@@ -89,6 +89,193 @@ function ss_content_type_lesson_strongarm() {
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
+  $strongarm->name = 'field_bundle_settings_node__lesson';
+  $strongarm->value = array(
+    'view_modes' => array(
+      'teaser' => array(
+        'custom_settings' => TRUE,
+      ),
+      'product_list' => array(
+        'custom_settings' => TRUE,
+      ),
+      'full' => array(
+        'custom_settings' => FALSE,
+      ),
+      'rss' => array(
+        'custom_settings' => FALSE,
+      ),
+      'token' => array(
+        'custom_settings' => FALSE,
+      ),
+      'revision' => array(
+        'custom_settings' => FALSE,
+      ),
+      'featured' => array(
+        'custom_settings' => TRUE,
+      ),
+      'purchased' => array(
+        'custom_settings' => TRUE,
+      ),
+    ),
+    'extra_fields' => array(
+      'form' => array(
+        'path' => array(
+          'weight' => '30',
+        ),
+      ),
+      'display' => array(
+        'product:sku' => array(
+          'default' => array(
+            'weight' => '9',
+            'visible' => FALSE,
+          ),
+          'teaser' => array(
+            'weight' => '7',
+            'visible' => FALSE,
+          ),
+          'featured' => array(
+            'weight' => '14',
+            'visible' => FALSE,
+          ),
+          'purchased' => array(
+            'weight' => '6',
+            'visible' => FALSE,
+          ),
+        ),
+        'product:title' => array(
+          'default' => array(
+            'weight' => '10',
+            'visible' => FALSE,
+          ),
+          'teaser' => array(
+            'weight' => '8',
+            'visible' => FALSE,
+          ),
+          'featured' => array(
+            'weight' => '15',
+            'visible' => FALSE,
+          ),
+          'purchased' => array(
+            'weight' => '7',
+            'visible' => FALSE,
+          ),
+        ),
+        'product:status' => array(
+          'default' => array(
+            'weight' => '18',
+            'visible' => FALSE,
+          ),
+          'teaser' => array(
+            'weight' => '19',
+            'visible' => FALSE,
+          ),
+          'featured' => array(
+            'weight' => '17',
+            'visible' => FALSE,
+          ),
+          'purchased' => array(
+            'weight' => '10',
+            'visible' => FALSE,
+          ),
+        ),
+        'product:title_field' => array(
+          'default' => array(
+            'weight' => '11',
+            'visible' => FALSE,
+          ),
+          'teaser' => array(
+            'weight' => '9',
+            'visible' => FALSE,
+          ),
+          'featured' => array(
+            'weight' => '16',
+            'visible' => FALSE,
+          ),
+          'purchased' => array(
+            'weight' => '8',
+            'visible' => FALSE,
+          ),
+        ),
+        'product:commerce_price' => array(
+          'default' => array(
+            'weight' => '1',
+            'visible' => TRUE,
+          ),
+          'teaser' => array(
+            'weight' => '3',
+            'visible' => FALSE,
+          ),
+          'featured' => array(
+            'weight' => '13',
+            'visible' => FALSE,
+          ),
+          'purchased' => array(
+            'weight' => '9',
+            'visible' => FALSE,
+          ),
+        ),
+        'product:commerce_license_type' => array(
+          'default' => array(
+            'weight' => '19',
+            'visible' => FALSE,
+          ),
+          'teaser' => array(
+            'weight' => '4',
+            'visible' => FALSE,
+          ),
+          'featured' => array(
+            'weight' => '18',
+            'visible' => FALSE,
+          ),
+          'purchased' => array(
+            'weight' => '11',
+            'visible' => FALSE,
+          ),
+        ),
+        'product:commerce_license_duration' => array(
+          'default' => array(
+            'weight' => '20',
+            'visible' => FALSE,
+          ),
+          'teaser' => array(
+            'weight' => '5',
+            'visible' => FALSE,
+          ),
+          'featured' => array(
+            'weight' => '19',
+            'visible' => FALSE,
+          ),
+          'purchased' => array(
+            'weight' => '12',
+            'visible' => FALSE,
+          ),
+        ),
+        'product:commerce_file' => array(
+          'default' => array(
+            'weight' => '6',
+            'visible' => TRUE,
+          ),
+          'teaser' => array(
+            'weight' => '6',
+            'visible' => FALSE,
+          ),
+          'featured' => array(
+            'weight' => '5',
+            'visible' => FALSE,
+          ),
+          'purchased' => array(
+            'weight' => '1',
+            'visible' => TRUE,
+          ),
+        ),
+      ),
+    ),
+  );
+  $export['field_bundle_settings_node__lesson'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
   $strongarm->name = 'language_content_type_lesson';
   $strongarm->value = '0';
   $export['language_content_type_lesson'] = $strongarm;
