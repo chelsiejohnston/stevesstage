@@ -1,0 +1,16 @@
+name = SS Module Dependencies
+core = 7.x
+package = Steve's Stage
+dependencies[] = ds
+dependencies[] = ds_extras
+dependencies[] = ds_ui
+dependencies[] = entity_view_mode
+dependencies[] = jquery_update
+dependencies[] = media
+dependencies[] = media_internet
+dependencies[] = media_youtube
+dependencies[] = page_manager
+dependencies[] = panels
+dependencies[] = views_ui
+features[features_api][] = api:2
+project path = sites/all/modules/features
