@@ -343,6 +343,15 @@ function ss_content_type_lesson_ds_view_modes_info() {
 
   $ds_view_mode = new stdClass();
   $ds_view_mode->api_version = 1;
+  $ds_view_mode->view_mode = 'lesson_thumbnail';
+  $ds_view_mode->label = 'Lesson Thumbnail';
+  $ds_view_mode->entities = array(
+    'file' => 'file',
+  );
+  $export['lesson_thumbnail'] = $ds_view_mode;
+
+  $ds_view_mode = new stdClass();
+  $ds_view_mode->api_version = 1;
   $ds_view_mode->view_mode = 'purchased';
   $ds_view_mode->label = 'Purchased';
   $ds_view_mode->entities = array(
