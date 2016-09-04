@@ -35,6 +35,73 @@ function ss_content_type_lesson_ds_field_settings_info() {
   );
   $export['node|lesson|default'] = $ds_fieldsetting;
 
+  $ds_fieldsetting = new stdClass();
+  $ds_fieldsetting->api_version = 1;
+  $ds_fieldsetting->id = 'node|lesson|featured';
+  $ds_fieldsetting->entity_type = 'node';
+  $ds_fieldsetting->bundle = 'lesson';
+  $ds_fieldsetting->view_mode = 'featured';
+  $ds_fieldsetting->settings = array(
+    'node_link' => array(
+      'weight' => '4',
+      'label' => 'hidden',
+      'format' => 'default',
+      'formatter_settings' => array(
+        'link text' => 'Go to lesson',
+        'link class' => '',
+        'wrapper' => '',
+        'class' => '',
+      ),
+    ),
+  );
+  $export['node|lesson|featured'] = $ds_fieldsetting;
+
+  $ds_fieldsetting = new stdClass();
+  $ds_fieldsetting->api_version = 1;
+  $ds_fieldsetting->id = 'node|lesson|full';
+  $ds_fieldsetting->entity_type = 'node';
+  $ds_fieldsetting->bundle = 'lesson';
+  $ds_fieldsetting->view_mode = 'full';
+  $ds_fieldsetting->settings = array(
+    'comments' => array(
+      'weight' => '1',
+      'label' => 'hidden',
+      'format' => 'default',
+    ),
+    'author' => array(
+      'weight' => '7',
+      'label' => 'inline',
+      'format' => 'author',
+    ),
+    'post_date' => array(
+      'weight' => '8',
+      'label' => 'inline',
+      'format' => 'ds_post_date_medium',
+    ),
+  );
+  $export['node|lesson|full'] = $ds_fieldsetting;
+
+  $ds_fieldsetting = new stdClass();
+  $ds_fieldsetting->api_version = 1;
+  $ds_fieldsetting->id = 'node|lesson|teaser';
+  $ds_fieldsetting->entity_type = 'node';
+  $ds_fieldsetting->bundle = 'lesson';
+  $ds_fieldsetting->view_mode = 'teaser';
+  $ds_fieldsetting->settings = array(
+    'node_link' => array(
+      'weight' => '3',
+      'label' => 'hidden',
+      'format' => 'default',
+      'formatter_settings' => array(
+        'link text' => 'Go to lesson',
+        'link class' => '',
+        'wrapper' => '',
+        'class' => '',
+      ),
+    ),
+  );
+  $export['node|lesson|teaser'] = $ds_fieldsetting;
+
   return $export;
 }
 
@@ -149,16 +216,18 @@ function ss_content_type_lesson_ds_layout_settings_info() {
     'regions' => array(
       'ds_content' => array(
         0 => 'title_field',
-        1 => 'field_lesson_preview',
+        1 => 'field_youtube',
         2 => 'field_introduction',
         3 => 'field_lesson_category',
+        4 => 'node_link',
       ),
     ),
     'fields' => array(
       'title_field' => 'ds_content',
-      'field_lesson_preview' => 'ds_content',
+      'field_youtube' => 'ds_content',
       'field_introduction' => 'ds_content',
       'field_lesson_category' => 'ds_content',
+      'node_link' => 'ds_content',
     ),
     'classes' => array(),
     'wrappers' => array(
@@ -175,6 +244,51 @@ function ss_content_type_lesson_ds_layout_settings_info() {
 
   $ds_layout = new stdClass();
   $ds_layout->api_version = 1;
+  $ds_layout->id = 'node|lesson|full';
+  $ds_layout->entity_type = 'node';
+  $ds_layout->bundle = 'lesson';
+  $ds_layout->view_mode = 'full';
+  $ds_layout->layout = 'ds_reset';
+  $ds_layout->settings = array(
+    'regions' => array(
+      'ds_content' => array(
+        0 => 'title_field',
+        1 => 'comments',
+        2 => 'product:commerce_price',
+        3 => 'field_lesson_categories',
+        4 => 'field_introduction',
+        5 => 'field_youtube',
+        6 => 'field_product',
+        7 => 'author',
+        8 => 'post_date',
+      ),
+    ),
+    'fields' => array(
+      'title_field' => 'ds_content',
+      'comments' => 'ds_content',
+      'product:commerce_price' => 'ds_content',
+      'field_lesson_categories' => 'ds_content',
+      'field_introduction' => 'ds_content',
+      'field_youtube' => 'ds_content',
+      'field_product' => 'ds_content',
+      'author' => 'ds_content',
+      'post_date' => 'ds_content',
+    ),
+    'classes' => array(),
+    'wrappers' => array(
+      'ds_content' => 'div',
+    ),
+    'layout_wrapper' => 'div',
+    'layout_attributes' => '',
+    'layout_attributes_merge' => TRUE,
+    'layout_link_attribute' => FALSE,
+    'layout_link_custom' => '',
+    'layout_disable_css' => FALSE,
+  );
+  $export['node|lesson|full'] = $ds_layout;
+
+  $ds_layout = new stdClass();
+  $ds_layout->api_version = 1;
   $ds_layout->id = 'node|lesson|teaser';
   $ds_layout->entity_type = 'node';
   $ds_layout->bundle = 'lesson';
@@ -183,15 +297,17 @@ function ss_content_type_lesson_ds_layout_settings_info() {
   $ds_layout->settings = array(
     'regions' => array(
       'ds_content' => array(
-        0 => 'field_lesson_preview',
+        0 => 'field_youtube',
         1 => 'title_field',
         2 => 'field_introduction',
+        3 => 'node_link',
       ),
     ),
     'fields' => array(
-      'field_lesson_preview' => 'ds_content',
+      'field_youtube' => 'ds_content',
       'title_field' => 'ds_content',
       'field_introduction' => 'ds_content',
+      'node_link' => 'ds_content',
     ),
     'classes' => array(),
     'wrappers' => array(

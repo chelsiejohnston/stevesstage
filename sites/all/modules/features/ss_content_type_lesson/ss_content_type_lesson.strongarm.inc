@@ -99,7 +99,7 @@ function ss_content_type_lesson_strongarm() {
         'custom_settings' => TRUE,
       ),
       'full' => array(
-        'custom_settings' => FALSE,
+        'custom_settings' => TRUE,
       ),
       'rss' => array(
         'custom_settings' => FALSE,
@@ -133,15 +133,19 @@ function ss_content_type_lesson_strongarm() {
             'visible' => FALSE,
           ),
           'teaser' => array(
-            'weight' => '7',
+            'weight' => '19',
             'visible' => FALSE,
           ),
           'featured' => array(
-            'weight' => '14',
+            'weight' => '19',
             'visible' => FALSE,
           ),
           'purchased' => array(
             'weight' => '6',
+            'visible' => FALSE,
+          ),
+          'full' => array(
+            'weight' => '20',
             'visible' => FALSE,
           ),
         ),
@@ -151,15 +155,19 @@ function ss_content_type_lesson_strongarm() {
             'visible' => FALSE,
           ),
           'teaser' => array(
-            'weight' => '8',
+            'weight' => '20',
             'visible' => FALSE,
           ),
           'featured' => array(
-            'weight' => '15',
+            'weight' => '20',
             'visible' => FALSE,
           ),
           'purchased' => array(
             'weight' => '7',
+            'visible' => FALSE,
+          ),
+          'full' => array(
+            'weight' => '21',
             'visible' => FALSE,
           ),
         ),
@@ -169,15 +177,19 @@ function ss_content_type_lesson_strongarm() {
             'visible' => FALSE,
           ),
           'teaser' => array(
-            'weight' => '19',
+            'weight' => '24',
             'visible' => FALSE,
           ),
           'featured' => array(
-            'weight' => '17',
+            'weight' => '22',
             'visible' => FALSE,
           ),
           'purchased' => array(
             'weight' => '10',
+            'visible' => FALSE,
+          ),
+          'full' => array(
+            'weight' => '23',
             'visible' => FALSE,
           ),
         ),
@@ -187,15 +199,19 @@ function ss_content_type_lesson_strongarm() {
             'visible' => FALSE,
           ),
           'teaser' => array(
-            'weight' => '9',
+            'weight' => '21',
             'visible' => FALSE,
           ),
           'featured' => array(
-            'weight' => '16',
+            'weight' => '21',
             'visible' => FALSE,
           ),
           'purchased' => array(
             'weight' => '8',
+            'visible' => FALSE,
+          ),
+          'full' => array(
+            'weight' => '22',
             'visible' => FALSE,
           ),
         ),
@@ -205,16 +221,20 @@ function ss_content_type_lesson_strongarm() {
             'visible' => TRUE,
           ),
           'teaser' => array(
-            'weight' => '3',
+            'weight' => '15',
             'visible' => FALSE,
           ),
           'featured' => array(
-            'weight' => '13',
+            'weight' => '18',
             'visible' => FALSE,
           ),
           'purchased' => array(
             'weight' => '9',
             'visible' => FALSE,
+          ),
+          'full' => array(
+            'weight' => '2',
+            'visible' => TRUE,
           ),
         ),
         'product:commerce_license_type' => array(
@@ -223,15 +243,19 @@ function ss_content_type_lesson_strongarm() {
             'visible' => FALSE,
           ),
           'teaser' => array(
-            'weight' => '4',
+            'weight' => '16',
             'visible' => FALSE,
           ),
           'featured' => array(
-            'weight' => '18',
+            'weight' => '23',
             'visible' => FALSE,
           ),
           'purchased' => array(
             'weight' => '11',
+            'visible' => FALSE,
+          ),
+          'full' => array(
+            'weight' => '24',
             'visible' => FALSE,
           ),
         ),
@@ -241,15 +265,19 @@ function ss_content_type_lesson_strongarm() {
             'visible' => FALSE,
           ),
           'teaser' => array(
-            'weight' => '5',
+            'weight' => '17',
             'visible' => FALSE,
           ),
           'featured' => array(
-            'weight' => '19',
+            'weight' => '24',
             'visible' => FALSE,
           ),
           'purchased' => array(
             'weight' => '12',
+            'visible' => FALSE,
+          ),
+          'full' => array(
+            'weight' => '25',
             'visible' => FALSE,
           ),
         ),
@@ -259,16 +287,20 @@ function ss_content_type_lesson_strongarm() {
             'visible' => TRUE,
           ),
           'teaser' => array(
-            'weight' => '6',
+            'weight' => '18',
             'visible' => FALSE,
           ),
           'featured' => array(
-            'weight' => '5',
+            'weight' => '17',
             'visible' => FALSE,
           ),
           'purchased' => array(
             'weight' => '1',
             'visible' => TRUE,
+          ),
+          'full' => array(
+            'weight' => '19',
+            'visible' => FALSE,
           ),
         ),
       ),

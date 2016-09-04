@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the SS Views feature.
+ */
+
+include_once 'ss_views.features.inc';
