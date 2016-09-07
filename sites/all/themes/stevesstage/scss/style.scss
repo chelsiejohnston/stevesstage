@@ -27,6 +27,7 @@
 .panel-2col-stacked .center-wrapper {
   order: 2;
   width: 100%;
+  display: flex;
 }
 
 .panel-2col-stacked .panel-col-bottom {
@@ -39,27 +40,34 @@
   width: 25%;
 }
 
+.panel-2col-stacked .panel-col-center {
+  width: 50%;
+  margin-top: 0;
+}
+
 .panel-2col-stacked .panel-col-last {
-  width: 75%;
+  width: 25%;
   margin-top: 0;
 }
 
 // Lesson node views
 .node-lesson.view-mode-teaser {
+  @include make-row($gutter: $grid-gutter-width);
 
   .ds-top {
-    @include make-sm-column(12);
+    @include make-sm-column(12, $gutter: 0);
   }
 
   .ds-left {
-    @include make-sm-column(3);
+    @include make-sm-column(3, $gutter: 0);
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
+    test: 1;
   }
 
   .ds-right {
-    @include make-sm-column(9);
+    @include make-sm-column(9, $gutter: $grid-gutter-width);
   }
 
   .field-name-field-youtube {

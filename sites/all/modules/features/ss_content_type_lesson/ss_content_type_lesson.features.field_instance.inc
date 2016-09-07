@@ -599,7 +599,7 @@ function ss_content_type_lesson_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 5,
+        'weight' => 13,
       ),
       'full' => array(
         'label' => 'above',

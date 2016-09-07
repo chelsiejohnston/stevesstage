@@ -27,6 +27,9 @@
     <div class="panel-col-first panel-panel">
       <div class="inside"><?php print $content['left']; ?></div>
     </div>
+    <div class="panel-col-center panel-panel">
+      <div class="inside"><?php print $content['center']; ?></div>
+    </div>
     <div class="panel-col-last panel-panel">
       <div class="inside"><?php print $content['right']; ?></div>
     </div>

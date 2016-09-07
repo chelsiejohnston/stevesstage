@@ -10,7 +10,8 @@ $plugin = array(
   'regions' => array(
     'top' => t('Top'),
     'left' => t('Left side'),
-    'right' => t('Right side'),
+    'center' => t('Center'),
+     'right' => t('Right side'),
     'bottom' => t('Bottom')
   ),
 );

@@ -6475,7 +6475,8 @@ body.navbar-tray-open.navbar-vertical.navbar-fixed {
 
 .panel-2col-stacked .center-wrapper {
   order: 2;
-  width: 100%; }
+  width: 100%;
+  display: flex; }
 
 .panel-2col-stacked .panel-col-bottom {
   order: 3;
@@ -6484,37 +6485,59 @@ body.navbar-tray-open.navbar-vertical.navbar-fixed {
 .panel-2col-stacked .panel-col-first {
   width: 25%; }
 
-.panel-2col-stacked .panel-col-last {
-  width: 75%;
+.panel-2col-stacked .panel-col-center {
+  width: 50%;
   margin-top: 0; }
 
-.node-lesson.view-mode-teaser .ds-left {
-  position: relative;
-  min-height: 1px;
-  padding-left: 15px;
-  padding-right: 15px;
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap; }
-  @media (min-width: 768px) {
-    .node-lesson.view-mode-teaser .ds-left {
-      float: left;
-      width: 25%; } }
-.node-lesson.view-mode-teaser .ds-right {
-  position: relative;
-  min-height: 1px;
-  padding-left: 15px;
-  padding-right: 15px; }
-  @media (min-width: 768px) {
-    .node-lesson.view-mode-teaser .ds-right {
-      float: left;
-      width: 75%; } }
-.node-lesson.view-mode-teaser .field-name-field-youtube {
-  width: 100%;
-  order: 2; }
-.node-lesson.view-mode-teaser .field-name-title-field {
-  width: 100%;
-  order: 1;
+.panel-2col-stacked .panel-col-last {
+  width: 25%;
   margin-top: 0; }
+
+.node-lesson.view-mode-teaser {
+  margin-left: -15px;
+  margin-right: -15px; }
+  .node-lesson.view-mode-teaser:before, .node-lesson.view-mode-teaser:after {
+    content: " ";
+    display: table; }
+  .node-lesson.view-mode-teaser:after {
+    clear: both; }
+  .node-lesson.view-mode-teaser .ds-top {
+    position: relative;
+    min-height: 1px;
+    padding-left: 0;
+    padding-right: 0; }
+    @media (min-width: 768px) {
+      .node-lesson.view-mode-teaser .ds-top {
+        float: left;
+        width: 100%; } }
+  .node-lesson.view-mode-teaser .ds-left {
+    position: relative;
+    min-height: 1px;
+    padding-left: 0;
+    padding-right: 0;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    test: 1; }
+    @media (min-width: 768px) {
+      .node-lesson.view-mode-teaser .ds-left {
+        float: left;
+        width: 25%; } }
+  .node-lesson.view-mode-teaser .ds-right {
+    position: relative;
+    min-height: 1px;
+    padding-left: 15px;
+    padding-right: 15px; }
+    @media (min-width: 768px) {
+      .node-lesson.view-mode-teaser .ds-right {
+        float: left;
+        width: 75%; } }
+  .node-lesson.view-mode-teaser .field-name-field-youtube {
+    width: 100%;
+    order: 2; }
+  .node-lesson.view-mode-teaser .field-name-title-field {
+    width: 100%;
+    order: 1;
+    margin-top: 0; }
 
 /*# sourceMappingURL=style.css.map */
