@@ -248,10 +248,20 @@ function ss_content_type_lesson_ds_layout_settings_info() {
   $ds_layout->entity_type = 'node';
   $ds_layout->bundle = 'lesson';
   $ds_layout->view_mode = 'full';
-  $ds_layout->layout = 'ds_reset';
+  $ds_layout->layout = 'lesson_two_column';
   $ds_layout->settings = array(
+    'classes' => array(),
+    'wrappers' => array(
+      'ds_content' => 'div',
+    ),
+    'layout_wrapper' => 'div',
+    'layout_attributes' => '',
+    'layout_attributes_merge' => TRUE,
+    'layout_link_attribute' => FALSE,
+    'layout_link_custom' => '',
+    'layout_disable_css' => 0,
     'regions' => array(
-      'ds_content' => array(
+      'left' => array(
         0 => 'title_field',
         1 => 'comments',
         2 => 'product:commerce_price',
@@ -264,26 +274,16 @@ function ss_content_type_lesson_ds_layout_settings_info() {
       ),
     ),
     'fields' => array(
-      'title_field' => 'ds_content',
-      'comments' => 'ds_content',
-      'product:commerce_price' => 'ds_content',
-      'field_lesson_categories' => 'ds_content',
-      'field_introduction' => 'ds_content',
-      'field_youtube' => 'ds_content',
-      'field_product' => 'ds_content',
-      'author' => 'ds_content',
-      'post_date' => 'ds_content',
+      'title_field' => 'left',
+      'comments' => 'left',
+      'product:commerce_price' => 'left',
+      'field_lesson_categories' => 'left',
+      'field_introduction' => 'left',
+      'field_youtube' => 'left',
+      'field_product' => 'left',
+      'author' => 'left',
+      'post_date' => 'left',
     ),
-    'classes' => array(),
-    'wrappers' => array(
-      'ds_content' => 'div',
-    ),
-    'layout_wrapper' => 'div',
-    'layout_attributes' => '',
-    'layout_attributes_merge' => TRUE,
-    'layout_link_attribute' => FALSE,
-    'layout_link_custom' => '',
-    'layout_disable_css' => FALSE,
   );
   $export['node|lesson|full'] = $ds_layout;
 
@@ -293,32 +293,38 @@ function ss_content_type_lesson_ds_layout_settings_info() {
   $ds_layout->entity_type = 'node';
   $ds_layout->bundle = 'lesson';
   $ds_layout->view_mode = 'teaser';
-  $ds_layout->layout = 'ds_reset';
+  $ds_layout->layout = 'lesson_two_column';
   $ds_layout->settings = array(
     'regions' => array(
-      'ds_content' => array(
-        0 => 'field_youtube',
-        1 => 'title_field',
+      'top' => array(
+        0 => 'title_field',
+      ),
+      'left' => array(
+        1 => 'field_youtube',
+      ),
+      'right' => array(
         2 => 'field_introduction',
         3 => 'node_link',
       ),
     ),
     'fields' => array(
-      'field_youtube' => 'ds_content',
-      'title_field' => 'ds_content',
-      'field_introduction' => 'ds_content',
-      'node_link' => 'ds_content',
+      'title_field' => 'top',
+      'field_youtube' => 'left',
+      'field_introduction' => 'right',
+      'node_link' => 'right',
     ),
     'classes' => array(),
     'wrappers' => array(
-      'ds_content' => 'div',
+      'top' => 'div',
+      'left' => 'div',
+      'right' => 'div',
     ),
     'layout_wrapper' => 'div',
     'layout_attributes' => '',
-    'layout_attributes_merge' => TRUE,
-    'layout_link_attribute' => FALSE,
+    'layout_attributes_merge' => 1,
+    'layout_link_attribute' => '',
     'layout_link_custom' => '',
-    'layout_disable_css' => FALSE,
+    'layout_disable_css' => 0,
   );
   $export['node|lesson|teaser'] = $ds_layout;
 

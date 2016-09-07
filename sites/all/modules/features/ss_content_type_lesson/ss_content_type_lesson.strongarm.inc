@@ -146,7 +146,7 @@ function ss_content_type_lesson_strongarm() {
           ),
           'full' => array(
             'weight' => '20',
-            'visible' => FALSE,
+            'visible' => TRUE,
           ),
         ),
         'product:title' => array(
@@ -168,7 +168,7 @@ function ss_content_type_lesson_strongarm() {
           ),
           'full' => array(
             'weight' => '21',
-            'visible' => FALSE,
+            'visible' => TRUE,
           ),
         ),
         'product:status' => array(
@@ -190,7 +190,7 @@ function ss_content_type_lesson_strongarm() {
           ),
           'full' => array(
             'weight' => '23',
-            'visible' => FALSE,
+            'visible' => TRUE,
           ),
         ),
         'product:title_field' => array(
@@ -212,7 +212,7 @@ function ss_content_type_lesson_strongarm() {
           ),
           'full' => array(
             'weight' => '22',
-            'visible' => FALSE,
+            'visible' => TRUE,
           ),
         ),
         'product:commerce_price' => array(
@@ -256,7 +256,7 @@ function ss_content_type_lesson_strongarm() {
           ),
           'full' => array(
             'weight' => '24',
-            'visible' => FALSE,
+            'visible' => TRUE,
           ),
         ),
         'product:commerce_license_duration' => array(
@@ -278,7 +278,7 @@ function ss_content_type_lesson_strongarm() {
           ),
           'full' => array(
             'weight' => '25',
-            'visible' => FALSE,
+            'visible' => TRUE,
           ),
         ),
         'product:commerce_file' => array(
@@ -300,7 +300,7 @@ function ss_content_type_lesson_strongarm() {
           ),
           'full' => array(
             'weight' => '19',
-            'visible' => FALSE,
+            'visible' => TRUE,
           ),
         ),
       ),

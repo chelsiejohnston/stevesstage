@@ -6,3 +6,70 @@
 
 // Base-theme overrides.
 @import 'overrides';
+
+* + * {
+  margin-top: 1.4em;
+}
+
+.content {
+  // a questionable override...
+  margin-top: 0;
+}
+
+// Panels layouts
+.panel-2col-stacked {
+  display: flex;
+  flex-direction: row;
+  flex-flow: wrap;
+  max-width: 1170px;
+}
+
+.panel-2col-stacked .center-wrapper {
+  order: 2;
+  width: 100%;
+}
+
+.panel-2col-stacked .panel-col-bottom {
+  order: 3;
+  width: 100%;
+}
+
+.panel-2col-stacked .panel-col-first {
+  // get yo' bootstrap styles out of here!
+  width: 25%;
+}
+
+.panel-2col-stacked .panel-col-last {
+  width: 75%;
+  margin-top: 0;
+}
+
+// Lesson node views
+.node-lesson.view-mode-teaser {
+
+  .ds-top {
+    @include make-sm-column(12);
+  }
+
+  .ds-left {
+    @include make-sm-column(3);
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .ds-right {
+    @include make-sm-column(9);
+  }
+
+  .field-name-field-youtube {
+    width: 100%;
+    order: 2;
+  }
+
+  .field-name-title-field {
+    width: 100%;
+    order: 1;
+    margin-top: 0;
+  }
+}

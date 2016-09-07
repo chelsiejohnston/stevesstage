@@ -2,6 +2,7 @@ name = SS Content Type Lesson
 core = 7.x
 package = Steve's Stage
 dependencies[] = ds
+dependencies[] = entityreference
 dependencies[] = media
 dependencies[] = text
 features[commerce_autosku_patterns][] = lesson

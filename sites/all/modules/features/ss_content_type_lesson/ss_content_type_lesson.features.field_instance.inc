@@ -532,8 +532,12 @@ function ss_content_type_lesson_field_default_field_instances() {
       ),
       'full' => array(
         'label' => 'hidden',
-        'settings' => array(),
-        'type' => 'hidden',
+        'module' => 'entityreference',
+        'settings' => array(
+          'links' => TRUE,
+          'view_mode' => 'default',
+        ),
+        'type' => 'entityreference_entity_view',
         'weight' => 16,
       ),
       'product_list' => array(
@@ -599,8 +603,12 @@ function ss_content_type_lesson_field_default_field_instances() {
       ),
       'full' => array(
         'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
+        'module' => 'commerce_file',
+        'settings' => array(
+          'check_access' => TRUE,
+          'show_icon' => TRUE,
+        ),
+        'type' => 'commerce_file',
         'weight' => 17,
       ),
       'product_list' => array(
@@ -797,7 +805,7 @@ function ss_content_type_lesson_field_default_field_instances() {
           'file_view_mode' => 'lesson_thumbnail',
         ),
         'type' => 'file_rendered',
-        'weight' => 0,
+        'weight' => 1,
       ),
     ),
     'entity_type' => 'node',
@@ -851,8 +859,8 @@ function ss_content_type_lesson_field_default_field_instances() {
         'module' => 'title',
         'settings' => array(
           'title_class' => '',
-          'title_link' => 'content',
-          'title_style' => '',
+          'title_link' => '',
+          'title_style' => 'h1',
         ),
         'type' => 'title_linked',
         'weight' => 0,
@@ -910,7 +918,7 @@ function ss_content_type_lesson_field_default_field_instances() {
           'title_style' => '',
         ),
         'type' => 'title_linked',
-        'weight' => 1,
+        'weight' => 0,
       ),
     ),
     'entity_type' => 'node',
