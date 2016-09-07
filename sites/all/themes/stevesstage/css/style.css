@@ -6493,6 +6493,13 @@ body.navbar-tray-open.navbar-vertical.navbar-fixed {
   width: 25%;
   margin-top: 0; }
 
+.node-lesson .field-name-title-field span {
+  font-size: 1.75em; }
+.node-lesson .field.inline .field-items {
+  display: inline;
+  margin-top: 0;
+  float: left; }
+
 .node-lesson.view-mode-teaser {
   margin-left: -15px;
   margin-right: -15px; }
@@ -6536,6 +6543,61 @@ body.navbar-tray-open.navbar-vertical.navbar-fixed {
     width: 100%;
     order: 2; }
   .node-lesson.view-mode-teaser .field-name-title-field {
+    width: 100%;
+    order: 1;
+    margin-top: 0; }
+
+.node-lesson.view-mode-featured {
+  margin-left: -15px;
+  margin-right: -15px;
+  position: relative;
+  min-height: 1px;
+  padding-left: 0;
+  padding-right: 0; }
+  .node-lesson.view-mode-featured:before, .node-lesson.view-mode-featured:after {
+    content: " ";
+    display: table; }
+  .node-lesson.view-mode-featured:after {
+    clear: both; }
+  @media (min-width: 768px) {
+    .node-lesson.view-mode-featured {
+      float: left;
+      width: 100%; } }
+  .node-lesson.view-mode-featured .ds-top {
+    position: relative;
+    min-height: 1px;
+    padding-left: 0;
+    padding-right: 0; }
+    @media (min-width: 768px) {
+      .node-lesson.view-mode-featured .ds-top {
+        float: left;
+        width: 100%; } }
+  .node-lesson.view-mode-featured .ds-left {
+    position: relative;
+    min-height: 1px;
+    padding-left: 0;
+    padding-right: 0;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    test: 1; }
+    @media (min-width: 768px) {
+      .node-lesson.view-mode-featured .ds-left {
+        float: left;
+        width: 50%; } }
+  .node-lesson.view-mode-featured .ds-right {
+    position: relative;
+    min-height: 1px;
+    padding-left: 15px;
+    padding-right: 15px; }
+    @media (min-width: 768px) {
+      .node-lesson.view-mode-featured .ds-right {
+        float: left;
+        width: 50%; } }
+  .node-lesson.view-mode-featured .field-name-field-youtube {
+    width: 100%;
+    order: 2; }
+  .node-lesson.view-mode-featured .field-name-title-field {
     width: 100%;
     order: 1;
     margin-top: 0; }

@@ -769,7 +769,7 @@ function ss_content_type_lesson_field_default_field_instances() {
         'weight' => 4,
       ),
       'featured' => array(
-        'label' => 'above',
+        'label' => 'hidden',
         'module' => 'file_entity',
         'settings' => array(
           'file_view_mode' => 'default',
@@ -871,7 +871,7 @@ function ss_content_type_lesson_field_default_field_instances() {
         'settings' => array(
           'title_class' => '',
           'title_link' => 'content',
-          'title_style' => '',
+          'title_style' => 'span',
         ),
         'type' => 'title_linked',
         'weight' => 0,
@@ -913,9 +913,9 @@ function ss_content_type_lesson_field_default_field_instances() {
         'label' => 'hidden',
         'module' => 'title',
         'settings' => array(
-          'title_class' => '',
+          'title_class' => 'lesson-title',
           'title_link' => 'content',
-          'title_style' => '',
+          'title_style' => 'span',
         ),
         'type' => 'title_linked',
         'weight' => 0,
